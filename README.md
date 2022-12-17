@@ -83,12 +83,17 @@ Because this application requires a database, we'll need to use Amazon RDS as a 
 8. Configure the DB and Application connection with correct parameter.
 9. Test the connection between DB and application.
 
+#### Auto Scaling Setup
+1. Create AMI of the existing instance. The purpose is that whenever the Auto Scaler needs to scale up the instances, it can create new instances based on this AMI.
+2. Create a new Launch Configuration. This is to choose which hardware specification we need to use for scaling up.
+3. Create a new auto scaling group. The key points in this step : the scaling capacity, and load balacing.
+
 #### Load Balancer Setup
 1. Create a new classic Balancer
 2. Please make sure the Balancer is on the desired VPC
 3. In this phase, choosing various subnets in different AZ is preferred to provide High Availability of our applications.
-4. Test the load balancer if it's ready
-
+4. Go to Auto Scaling Groups to add the Elastic Load Balancer that has been created recently
+5. Test the load balancer if it's ready
 
 ## Final Step
 The final step in this phase is mitigate the domain to Amazon Route53
