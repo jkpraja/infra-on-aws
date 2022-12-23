@@ -23,7 +23,7 @@ Auto scaling solves various cases:
 3. Makes it easier than ever to use spot instances,
 4. Allow scaling infrastructure up and down to save cost.
 ## Architecture
-![Topology](https://github.com/jkpraja/infra-on-aws/blob/007847abcc829ca7155f120b87d5efca10d6a54d/project%204.png)
+![Topology](https://github.com/jkpraja/infra-on-aws/blob/main/project%204.png?raw=true)
 ## You'll need
 - An AWS Account
 - At least 2 applications, in this case, we'll use:
